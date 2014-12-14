@@ -10,7 +10,7 @@ COPY mno/chef/s-install-config.rb /mno/chef/
 COPY mno/chef/s-install-attributes.json /mno/chef/
 
 # Install cookbooks
-RUN git clone https://github.com/cesar-tonnoir/cookbook-phpmysql.git /mno/chef/cache/cookbooks/phpmysql
+RUN git clone https://github.com/maestrano/cookbook-phpmysql.git /mno/chef/cache/cookbooks/phpmysql
 RUN berks install -b /mno/chef/cache/cookbooks/phpmysql/Berksfile
 RUN berks package -b /mno/chef/cache/cookbooks/phpmysql/Berksfile /mno/chef/cookbook-phpmysql.tar.gz
 
