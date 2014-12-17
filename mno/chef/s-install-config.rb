@@ -17,7 +17,7 @@
 # valid values are: :debug, :info, :warn, :error, :fatal
 # Corresponds to chef-solo -l
 
-# Cesar: Prevents chef bug about encoding
+# Cesar: Prevents chef bug about encoding 
 Encoding.default_external = Encoding::UTF_8
 ENV['LC_ALL'] = 'en_US.UTF-8' 
 

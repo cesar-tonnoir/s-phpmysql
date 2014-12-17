@@ -1,6 +1,6 @@
-# Ubuntu Maestrano base image
+# Maestrano PHP/MySAL stack
 
-FROM maestrano/b-ubuntu:14.04
+FROM maestrano/b-ubuntu
 
 MAINTAINER Cesar Tonnoir <it@maestrano.com>
 
@@ -17,5 +17,7 @@ RUN berks package -b /mno/chef/cache/cookbooks/phpmysql/Berksfile /mno/chef/cook
 # Run chef to install php-fpm, nginx, etc
 RUN chef-solo -c /mno/chef/s-install-config.rb && \
 	rm /mno/chef/cookbook-phpmysql.tar.gz
+
+RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 CMD ["/bin/bash"]
