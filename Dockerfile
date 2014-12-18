@@ -1,6 +1,6 @@
 # Maestrano PHP/MySAL stack
 
-FROM maestrano/b-ubuntu
+FROM maestrano/nex-b-ubuntu
 
 MAINTAINER Cesar Tonnoir <it@maestrano.com>
 
